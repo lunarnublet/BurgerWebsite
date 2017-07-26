@@ -1,0 +1,23 @@
+{
+  "name": "express-burgers",
+  "version": "1.0.0",
+  "description": "Cool website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lunarnublet/BurgerWebsite.git"
+  },
+  "author": "perhaps",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lunarnublet/BurgerWebsite/issues"
+  },
+  "homepage": "https://github.com/lunarnublet/BurgerWebsite#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "pug": "^2.0.0-rc.2"
+  }
+}
