@@ -4,6 +4,8 @@
         ["Home", "/"],
         ["Entree", "/menu/entree"],
         ["Sides", "/menu/sides"],
-        ["Drinks", "/menu/drinks"]     
-    ]
+        ["Drinks", "/menu/drinks"]  ,
+        ["Directions", "/directions"]   
+    ],
+    "apiKey": "AIzaSyCz-wDguTAkOJRzP3eCfqcS3aPMsSoqEOg"
 }
