@@ -15,5 +15,11 @@ app.get("/", function(req, res)
     res.render("index");
 });
 
+app.get("/menu/:page", function (req, res) {
+    res.render(req.params.page,
+        {title: req.params.page})
+    
+})
+
 
 app.listen(3000);
