@@ -1,0 +1,11 @@
+body {
+  font-family: sans-serif;
+  font-weight: 400; }
+
+.grid {
+  display: flex;
+  flex-flow: row wrap; }
+
+#map {
+  width: 100%;
+  height: 100%; }
