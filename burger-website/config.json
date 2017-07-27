@@ -1,0 +1,9 @@
+{
+    "nav": 
+    [
+        ["Home", "/"],
+        ["Entree", "/entree"],
+        ["Sides", "/sides"],
+        ["Drinks", "/drinks"]     
+    ]
+}
