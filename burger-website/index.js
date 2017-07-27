@@ -1,6 +1,7 @@
 var express = require("express");
 var pug = require("pug");
 var path = require("path");
+var config = require("./config");
 
 var app = express();
 
@@ -12,7 +13,7 @@ app.use(express.static(path.join(__dirname + "/public")));
 
 app.get("/", function(req, res)
 {
-    res.render("index");
+    res.render("index",{config: config});
 });
 
 app.get("/menu/:page", function (req, res) {

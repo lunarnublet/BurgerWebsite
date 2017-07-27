@@ -7,8 +7,10 @@ html
             h1 Express Burger
             nav 
                 ul
-                    
+                    each item in config.nav
+                        li
+                            a(href=item[1]) #{item[0]}
         div(id="content")
             block content
         footer
-            h1 &copy 2017
+            h3 &copy 2017
