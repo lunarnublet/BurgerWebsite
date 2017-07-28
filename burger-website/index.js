@@ -22,7 +22,8 @@ app.get("/directions", function (req, res) {
 
 app.get("/menu/:page", function (req, res) {
     res.render(req.params.page,
-        {title: req.params.page})
+    {title: req.params.page,
+    config: config})
     
 })
 
