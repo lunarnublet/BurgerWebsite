@@ -1,3 +1,8 @@
 extends ../layouts/layout-menu
-block content
+prepend content
     h2 Entrees
+        ul
+            each item in config.entree
+                li
+                    p #{item[0]}
+                    img(src=item[1])
