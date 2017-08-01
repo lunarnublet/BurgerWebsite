@@ -13,7 +13,10 @@ app.use(express.static(path.join(__dirname + "/public")));
 
 app.get("/", function(req, res)
 {
-    res.render("index",{config: config});
+    var entreeNumber = Math.floor(Math.random() * config.nav.length);
+    var drinkNumber = Math.floor(Math.random() * config.nav.length);
+    var sideNumber = Math.floor(Math.random() * config.nav.length);
+    res.render("index",{config: config, entreeNumber: entreeNumber, drinkNumber: drinkNumber, sideNumber: sideNumber});
 });
 
 app.get("/directions", function (req, res) {
@@ -22,9 +25,10 @@ app.get("/directions", function (req, res) {
 
 app.get("/menu/:page", function (req, res) {
     res.render(req.params.page,
-        {title: req.params.page})
+    {title: req.params.page,
+    config: config});
     
-})
+});
 
 
 app.listen(3000);
