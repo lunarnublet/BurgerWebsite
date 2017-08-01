@@ -1,11 +1,13 @@
-doctype html
-html
-    head
-        link(rel='stylesheet' href='css/burgers.css')
-    body
-        div(class='grid')
-            div(class='row')
-                div(class='col-4 col-sm-12')
-                    div(id='map')   
-        script(src='/js/directions.js')
-        script(async defer src='https://maps.googleapis.com/maps/api/js?key=' + config.apiKey + '&callback=burgers.initMap')
+extends ../layouts/layout-main
+block content
+    div(class='grid')
+        div(class='row')
+            div(class='offset-4 col-4')
+                h1 Check it out.
+                p Check it out.
+        div(class='row')
+            div(class='offset-4 col-4')
+                div(id='map')
+block script
+    script(src='/js/directions.js')
+    script(async defer src='https://maps.googleapis.com/maps/api/js?key=' + config.apiKey + '&callback=burgers.initMap')
