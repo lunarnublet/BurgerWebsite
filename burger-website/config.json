@@ -2,7 +2,7 @@
     "nav": 
     [
         ["Home", "/"],
-        ["Entree", "/menu/entree"],
+        ["Entrees", "/menu/entrees"],
         ["Sides", "/menu/sides"],
         ["Drinks", "/menu/drinks"]  ,
         ["Directions", "/directions"]   
