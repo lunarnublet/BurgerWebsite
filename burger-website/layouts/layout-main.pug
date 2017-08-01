@@ -5,12 +5,16 @@ html
     body
         div(id='page-wrapper')
             header
-                h1 Express Burger
-                nav 
-                    ul
-                        each item in config.nav
-                            li
-                                a(href=item[1]) #{item[0]}
+                div(class="grid")
+                    div(class="row")
+                        div(class="col-3")    
+                            h1 Express Burger
+                        div(class="col-md-3 offset-md-6")
+                            nav 
+                                ul
+                                    each item in config.nav
+                                        li
+                                            a(href=item[1]) #{item[0]}
             div(id="content")
                 block content
             footer

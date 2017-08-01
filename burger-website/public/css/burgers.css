@@ -335,6 +335,25 @@ footer {
     text-align: center;
     margin-top: 50px; }
 
+header {
+  -webkit-box-shadow: 0px 0.25px 3px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0.25px 3px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0.25px 3px 0px rgba(0, 0, 0, 0.75);
+  padding: 1rem 2rem;
+  margin-bottom: 5rem; }
+  header h1 {
+    font-size: 48px; }
+  header nav ul {
+    list-style-type: none; }
+    header nav ul li {
+      padding: 20px 15px;
+      display: inline-block;
+      background-color: #eee; }
+      header nav ul li:hover {
+        background-color: #aaa; }
+      header nav ul li a {
+        text-align: center; }
+
 html, body {
   margin: 0;
   padding: 0;
@@ -353,3 +372,9 @@ html, body {
   vertical-align: baseline;
   background: transparent;
   box-sizing: inherit; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+  a:visited {
+    color: #000; }
