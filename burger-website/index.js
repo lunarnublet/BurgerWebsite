@@ -5,7 +5,6 @@ var config = require("./config.json");
 
 var app = express();
 
-
 app.set("view engine", "pug");
 app.set("views", __dirname + "/views");
 app.use(express.static(path.join(__dirname + "/public")));
@@ -25,10 +24,13 @@ app.get("/directions", function (req, res) {
 
 app.get("/menu/:page", function (req, res) {
     res.render(req.params.page,
-    {title: req.params.page,
-    config: config});
-    
+        {title: capitalizeFirstLetter(req.params.page),
+            config: config,
+        menu_items: config[req.params.page]});
 });
 
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
 app.listen(3000);
