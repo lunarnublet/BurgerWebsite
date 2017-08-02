@@ -1,16 +1,23 @@
 doctype html
 html
     head
-
+        link(rel='stylesheet' href='css/burgers.css')
+        title #{title}
     body
-        header
-            h1 Express Burger
-            nav 
-                ul
-                    each item in config.nav
-                        li
-                            a(href=item[1]) #{item[0]}
-        div(id="content")
-            block content
-        footer
-            h3 &copy 2017
+        div(id='page-wrapper')
+            header
+                div(class="grid")
+                    div(class="row")
+                        div(class="col-3")    
+                            h1 Express Burger
+                        div(class="col-md-3 offset-md-6")
+                            nav 
+                                ul
+                                    each item in config.nav
+                                        li
+                                            a(href=item[1]) #{item[0]}
+            div(id="content")
+                block content
+            footer
+                h3 Express Burgers &copy2017
+        block script
