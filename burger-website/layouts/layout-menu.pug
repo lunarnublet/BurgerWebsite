@@ -1,9 +1,15 @@
 extends ../layouts/layout-main
 block content
-    h2 #{title}
-    each item in menu_items
-            li
-                div
-                p #{item[0]}
-                p #{item[1]}
-                img(src=item[2])
+    div(class='grid')
+        div(class='row')
+            div(class='col-4 offset-4')
+                h2(class='menu-header txt-center') #{title}
+        each item in menu_items
+            div(class='row')
+                div(class='col-6 offset-3 col-md-3 offset-md-3')
+                    div(class='menu-item')
+                        img(class='img' src=item[2])
+                div(class='col-6 offset-3 col-md-4 offset-md-0')
+                    div(class='menu-item')
+                        h3(class='item-header') #{item[0]}
+                        p(class='item-description') #{item[1]}
