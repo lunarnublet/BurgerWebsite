@@ -7,8 +7,14 @@ block content
             div
                 p Entree: #{config.entrees[entreeNumber][0]}
                 img(src=config.entrees[entreeNumber][2])
-        li Side: #{sideNumber}
-        li Drink: #{drinkNumber}
+        li
+            div
+                p Side: #{config.sides[sideNumber][0]}
+                img(src=config.sides[sideNumber][2])
+        li
+            div
+                p Drink: #{config.drinks[drinkNumber][0]}
+                img(src=config.drinks[drinkNumber][2])
     p We are a family owned burger joint that is dedicated to giving every customer the most delectable burger they've ever had. Our hand made, char broiled burgers will leave you wanting more. We have a variety of sides and drinks to go with your perfectly crafted burger. From fresh cut fries to mashed potatoes, coke and pepsi products, we have all the friends your burger will ever need. If you want something put on the menu, ask for it! With enough people asking for the same thing, we'll do our best to put it on the menu. Customers come first.
 block script
     script(src='/js/daily-combo.js')

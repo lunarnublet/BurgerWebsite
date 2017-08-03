@@ -13,8 +13,8 @@ app.use(express.static(path.join(__dirname + "/public")));
 app.get("/", function(req, res)
 {
     var entreeNumber = Math.floor(Math.random() * config.entrees.length);
-    var drinkNumber = Math.floor(Math.random() * config.nav.length);
-    var sideNumber = Math.floor(Math.random() * config.nav.length);
+    var drinkNumber = Math.floor(Math.random() * config.drinks.length);
+    var sideNumber = Math.floor(Math.random() * config.sides.length);
     res.render("index",{config: config, entreeNumber: entreeNumber, drinkNumber: drinkNumber, sideNumber: sideNumber});
 });
 
