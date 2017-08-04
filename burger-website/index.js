@@ -13,10 +13,15 @@ app.get("/", function (req, res) {
     var burgerNumber = Math.floor(Math.random() * config.burgers.length);
     var drinkNumber = Math.floor(Math.random() * config.drinks.length);
     var sideNumber = Math.floor(Math.random() * config.sides.length);
-    res.render("index", { config: config, burgerNumber: burgerNumber, drinkNumber: drinkNumber, sideNumber: sideNumber });
+    res.render("index", { config: config,
+        title: "Express Burger",
+        burgerNumber: burgerNumber, 
+        drinkNumber: drinkNumber, 
+    sideNumber: sideNumber });
 });
 app.get("/directions", function (req, res) {
-    res.render("directions", { config: config });
+    res.render("directions", { title:"Express Burger Directions",
+        config: config });
 });
 app.get("/menu/:page", function (req, res, next) {
     if (!isValidMenuPage(req.params.page)) {
@@ -24,7 +29,7 @@ app.get("/menu/:page", function (req, res, next) {
     }
 
     res.render(req.params.page, {
-        title: capitalizeFirstLetter(req.params.page),
+        title: "Express " + capitalizeFirstLetter(req.params.page),
         config: config,
         menu_items: config[req.params.page]
     });
