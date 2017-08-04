@@ -1,7 +1,7 @@
 var burgers = {}
 
 burgers.initMap = function() {
-    var myLatLng = {lat: 40.766246, lng: -111.8908555};
+    var myLatLng = {lat: 40.7661307, lng: -111.8906849};
 
     burgers.map = new google.maps.Map(document.getElementById('map'), {
         zoom: 18,
@@ -13,8 +13,4 @@ burgers.initMap = function() {
         map: burgers.map,
         title: 'Express Burger'
     });
-
-    // if (navigator.geolocation) {
-
-        // }
 }
