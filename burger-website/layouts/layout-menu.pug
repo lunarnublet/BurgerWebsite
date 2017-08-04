@@ -1,18 +1,14 @@
 extends ../layouts/layout-main
 block content
-    //- div(class='col-6 offset-3 col-md-3 offset-md-3')
     div(class='grid')
         div(class='row')
-            div(class='col-8 offset-2')
+            div(class='col-6 offset-3')
                 h2(class='menu-header txt-center') #{title}
         each item in menu_items
             div(class='row')
-                div(class='col-8 offset-2 col-md-6 offset-md-3 menu-item')
-                    div(class='row')
-                        div(class='col-10 offset-1 col-md-6 offset-md-0')
-                            div(class='flex-vertical-center')
-                                img(class='item-img img' src=item[2])
-                        div(class='col-4 col-md-4 offset-1 offset-md-0')
-                            div(class='flex-vertical-center')
-                                h3(class='item-header') #{item[0]}
-                                p(class='item-description') #{item[1]}
+                div(class='menu-item')
+                    img(class='item-img img' src=item[2])
+                    div(class='flex-vertical-center')
+                        h3(class='item-header') #{item[0]}
+                        hr(class='separator')
+                        p(class='item-description') #{item[1]}
