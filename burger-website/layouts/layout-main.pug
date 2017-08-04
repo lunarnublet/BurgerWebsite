@@ -8,10 +8,10 @@ html
         div(id='page-wrapper')
             header
                 h1 Express Burger
-                nav 
-                    ul
+                nav(class='nav-flex') 
+                    ul(class='nav-list')
                         each item in config.nav
-                            li
+                            li(class='nav-item')
                                 a(href=item[1]) #{item[0]}
             div(id="content")
                 block content

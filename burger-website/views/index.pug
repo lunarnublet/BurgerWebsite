@@ -4,26 +4,26 @@ block content
     h2 Combo of the day
     div(class='grid')
         div(id="dailyCombo" class='row')
-            //- ul(id="dailyCombo")  
-            div(class='col-lg-5 offset-lg-5')
+            div(class='col-lg-2 offset-lg-3')
                 div
                     p Burger: #{config.burgers[burgerNumber][0]}
                     img(class='img' src=config.burgers[burgerNumber][2])
-            div(class='col-lg-5 offset-lg-5')
+            div(class='col-lg-2 offset-lg-0')
                 div
                     p Side: #{config.sides[sideNumber][0]}
                     img(class='img' src=config.sides[sideNumber][2])
-            div(class='col-lg-5 offset-lg-5')
+            div(class='col-lg-2 offset-lg-0')
                 div
                     p Drink: #{config.drinks[drinkNumber][0]}
                     img(class='img' src=config.drinks[drinkNumber][2])
-        
-    p.
-        We are a family owned burger joint that is dedicated to giving every customer the most delectable burger they've ever had. 
-        Our hand made, char broiled burgers will leave you wanting more. 
-        We have a variety of sides and drinks to go with your perfectly crafted burger.
-        From fresh cut fries to mashed potatoes, coke and pepsi products, we have all the friends your burger will ever need.
-        If you want something put on the menu, ask for it! With enough people asking for the same thing, we'll do our best to put it on the menu. 
-        Customers come first.
+        div(class='row')
+            div(class='col-4 offset-4')
+                p.
+                    We are a family owned burger joint that is dedicated to giving every customer the most delectable burger they've ever had. 
+                    Our hand made, char broiled burgers will leave you wanting more. 
+                    We have a variety of sides and drinks to go with your perfectly crafted burger.
+                    From fresh cut fries to mashed potatoes, coke and pepsi products, we have all the friends your burger will ever need.
+                    If you want something put on the menu, ask for it! With enough people asking for the same thing, we'll do our best to put it on the menu. 
+                    Customers come first.
 block script
     script(src='/js/daily-combo.js')
