@@ -8,7 +8,7 @@
         ["Directions", "/directions"]   
     ],
     "apiKey": "AIzaSyCz-wDguTAkOJRzP3eCfqcS3aPMsSoqEOg",
-    "entrees":
+    "burgers":
     [
         ["Cheese Burger", "What you see is what you get. Melty American cheese, crinkle-cut pickles, chopped onions, fresh shredded lettuce & ripe tomatoes on a perfectly seasoned, 100% pure beef patty with your choice of mustard, mayo or ketchup. Straightforward and tasty, just the way it should be.", "https://lh3.googleusercontent.com/GlXvLkghQncBfhlGBrZ3lQBOwuAK1fk-CEDOhRXRmrd2GneQky6i-I831rC648o8NhSgwcQhI1xo46j-ggXZ-Q=s400"],
         ["Double Cheese Burger", "Two perfectly seasoned 100% pure beef patties layered with crinkle-cut pickles, chopped onions, fresh shredded lettuce & ripe tomatoes with your choice of mustard, mayo or ketchup. Seeing double has never been tastier.","https://lh3.googleusercontent.com/iXpM7AyZ6xcHp1rQ9RRUBve5TItpFxqSKYVJjRfaRRnBTEfToAnhltrKNSRemg1SO8yL55e10_NsknLk1IKq=s400"],

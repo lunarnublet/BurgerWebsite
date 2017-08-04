@@ -10,10 +10,10 @@ app.set("views", __dirname + "/views");
 app.use(express.static(path.join(__dirname, "/public")));
 
 app.get("/", function (req, res) {
-    var entreeNumber = Math.floor(Math.random() * config.entrees.length);
+    var burgerNumber = Math.floor(Math.random() * config.burgers.length);
     var drinkNumber = Math.floor(Math.random() * config.drinks.length);
     var sideNumber = Math.floor(Math.random() * config.sides.length);
-    res.render("index", { config: config, entreeNumber: entreeNumber, drinkNumber: drinkNumber, sideNumber: sideNumber });
+    res.render("index", { config: config, burgerNumber: burgerNumber, drinkNumber: drinkNumber, sideNumber: sideNumber });
 });
 app.get("/directions", function (req, res) {
     res.render("directions", { config: config });
@@ -40,7 +40,7 @@ function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 function isValidMenuPage(page) {
-    var pages = ["entrees", "sides", "drinks"];
+    var pages = ["burgers", "sides", "drinks"];
 
     for(let i = 0; i < pages.length; ++i) {
         if (page == pages[i]) return true;
