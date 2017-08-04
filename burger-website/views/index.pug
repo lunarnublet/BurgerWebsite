@@ -1,29 +1,39 @@
 extends ../layouts/layout-main
 block content
-    h2 Home
-    h2 Combo of the day
-    div(class='grid')
-        div(id="dailyCombo" class='row')
-            div(class='col-lg-2 offset-lg-3')
-                div
-                    p Burger: #{config.burgers[burgerNumber][0]}
-                    img(class='img' src=config.burgers[burgerNumber][2])
-            div(class='col-lg-2 offset-lg-0')
-                div
-                    p Side: #{config.sides[sideNumber][0]}
-                    img(class='img' src=config.sides[sideNumber][2])
-            div(class='col-lg-2 offset-lg-0')
-                div
-                    p Drink: #{config.drinks[drinkNumber][0]}
-                    img(class='img' src=config.drinks[drinkNumber][2])
-        div(class='row')
-            div(class='col-4 offset-4')
-                p.
-                    We are a family owned burger joint that is dedicated to giving every customer the most delectable burger they've ever had. 
-                    Our hand made, char broiled burgers will leave you wanting more. 
-                    We have a variety of sides and drinks to go with your perfectly crafted burger.
-                    From fresh cut fries to mashed potatoes, coke and pepsi products, we have all the friends your burger will ever need.
-                    If you want something put on the menu, ask for it! With enough people asking for the same thing, we'll do our best to put it on the menu. 
-                    Customers come first.
+    div(id='about' class='about')
+        h2(class='menu-header') About Us
+        div(class='col-4')
+            p.
+                We are a family owned burger joint that is dedicated to giving every customer the most delectable burger they've ever had. 
+                Our hand made, char broiled burgers will leave you wanting more. 
+                We have a variety of sides and drinks to go with your perfectly crafted burger.
+                From fresh cut fries to mashed potatoes, coke and pepsi products, we have all the friends your burger will ever need.
+                If you want something put on the menu, ask for it! With enough people asking for the same thing, we'll do our best to put it on the menu. 
+                Customers come first.
+        button(class='btn' onclick='onMouseClick()') Daily Combo
+        //- div(id="daily-combo" class='daily-combo')
+        //-     div
+        //-         h2 #{config.burgers[burgerNumber][0]}
+        //-         img(class='img' src=config.burgers[burgerNumber][2])
+        //-     div
+        //-         h2 #{config.sides[sideNumber][0]}
+        //-         img(class='img' src=config.sides[sideNumber][2])
+        //-     div
+        //-         h2(hidden) #{config.drinks[drinkNumber][0]}
+        //-         img(class='img' src=config.drinks[drinkNumber][2])
 block script
+    script.
+        var config = !{JSON.stringify(config)};
+        var burgerNumber = #{burgerNumber};
+        var sideNumber = #{sideNumber};
+        var drinkNumber  = #{drinkNumber};
+        
+        var dailyCombo = {
+            burger: config.burgers[burgerNumber][0],
+            burgerImg: config.burgers[burgerNumber][2],
+            side: config.sides[sideNumber][0],
+            sideImg: config.sides[sideNumber][2],
+            drink: config.drinks[drinkNumber][0],
+            drinkImg: config.drinks[drinkNumber][2],
+        };
     script(src='/js/daily-combo.js')

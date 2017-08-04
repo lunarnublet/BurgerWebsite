@@ -444,7 +444,7 @@ header {
   align-items: center;
   padding-left: 3rem;
   padding: 0 25rem;
-  margin-bottom: 5rem; }
+  margin-bottom: 3rem; }
 
 .brand {
   flex: 1; }
@@ -521,6 +521,44 @@ body {
 .brand {
   letter-spacing: 1px; }
 
+.item-slide:hover .item-img {
+  transition: all 0.5s ease-out;
+  transform: translateX(0%); }
+
+.item-slide:hover .item-description {
+  transition: visibility 0s, opacity 1s ease-in-out;
+  opacity: 1;
+  visibility: visible; }
+
+.item-slide:hover .item-header {
+  transition: visibility 0s, opacity 1s ease-in-out;
+  opacity: 1;
+  visibility: visible; }
+
+.item-slide:hover .separator {
+  transition: visibility 0s, opacity 1s ease-in-out;
+  opacity: 1;
+  visibility: visible; }
+
+.item-slide .item-img {
+  transform: translateX(50%);
+  transition: all 1s ease-out; }
+
+.item-slide .item-description {
+  opacity: 0;
+  visibility: visible;
+  transition: all 0.5s ease-out; }
+
+.item-slide .item-header {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-out; }
+
+.item-slide .separator {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-out; }
+
 .invisible {
   display: none; }
 
@@ -552,7 +590,7 @@ a {
 .menu-header {
   margin-bottom: 2rem;
   text-transform: uppercase;
-  font-family: 'Roboto Slab';
+  font-family: "Roboto Slab" serif;
   font-style: italic;
   font-size: 4rem;
   font-weight: 600;
@@ -567,18 +605,6 @@ a {
   flex-grow: 1;
   align-items: center;
   justify-content: center; }
-  .menu-item:hover .item-description {
-    transition: visibility 0s, opacity 0.5s ease-in;
-    opacity: 1;
-    visibility: visible; }
-  .menu-item:hover .item-header {
-    transition: all 0.5s ease-out;
-    transform: translateY(0%);
-    font-size: 18px; }
-  .menu-item:hover .separator {
-    transition: visibility 0s, opacity 0.5s ease-in;
-    opacity: 1;
-    visibility: visible; }
 
 .item-img {
   margin-left: -5px;
@@ -588,26 +614,78 @@ a {
 .item-header {
   margin-bottom: 1rem;
   margin-bottom: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 18px;
   text-transform: uppercase;
   flex: initial;
   color: #e53935;
-  vertical-align: center;
-  transform: translateY(300%); }
+  vertical-align: center; }
 
 .item-description {
   flex: initial;
   line-height: 1.5rem;
-  width: 250px;
-  opacity: 0;
-  visibility: hidden; }
-
-.separator {
-  opacity: 0;
-  visibility: hidden; }
+  width: 250px; }
 
 .flex-vertical-center {
   height: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column; }
+
+.about {
+  display: flex;
+  flex-direction: column;
+  flex-basis: auto;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center; }
+  .about h2 {
+    flex: inital; }
+  .about p {
+    flex: initial;
+    font-size: 20px;
+    line-height: 1.75rem;
+    text-align: justify;
+    text-justify: inter-word; }
+
+.btn {
+  margin: 1.25rem 0;
+  padding: 2rem;
+  border-radius: 2px;
+  background-color: #4db6ac;
+  color: #fefefe;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  transition: all 0.35s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: .5px; }
+  .btn:hover {
+    background-color: #71c5bd;
+    transform: scale(1.1); }
+
+.daily-combo {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  flex-basis: auto;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center; }
+  .daily-combo div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: auto;
+    align-content: center;
+    justify-content: center;
+    margin-right: 1rem; }
+    .daily-combo div h2 {
+      color: #e53935;
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+      text-align: center;
+      width: 12.5rem;
+      transition: all 1s ease-in-out; }
+    .daily-combo div img {
+      flex: initial;
+      width: 200px;
+      transition: all 1s ease-in-out; }
