@@ -48,6 +48,7 @@ function onButtonMouseOver() {
             
             var drinkImg = document.createElement('img');
             drinkImg.src = dailyCombo.drinkImg;
+            drinkImg.classList = "img";
 
             item.appendChild(drink);
             separator(item)
